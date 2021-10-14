@@ -227,7 +227,7 @@ def test_class_image_scan():
     for sub_dir in sub_dirs:
         for iterator in range(num_of_im_files):
             suffix_filetype = random.choice(suffix_filetypes)
-            tmp_files.append(tempfile.NamedTemporaryFile(dir=os.path.abspath(sub_dir), suffix=suffix_filetype[0]))
+            tmp_files.append(tempfile.NamedTemporaryFile(dir=os.path.abspath(sub_dir), suffix=suffix_filetype[0], delete=False))
             im = Image.fromarray(np.uint8(np.random.rand(80, 80, 3) * 255))
             im.save(tmp_files[image_counter].name, suffix_filetype[1])
             image_counter += 1
@@ -273,8 +273,8 @@ def test_class_image_scan():
     run()
 
     # Add some extra images in places where they should not be and re-run the tests.
-    temp_file_in_root_dir1 = tempfile.NamedTemporaryFile(dir=initial_temp_directory, suffix=".PNG")
-    temp_file_in_root_dir2 = tempfile.NamedTemporaryFile(dir=initial_temp_directory, suffix=".PNG")
+    temp_file_in_root_dir1 = tempfile.NamedTemporaryFile(dir=initial_temp_directory, suffix=".PNG", delete=False)
+    temp_file_in_root_dir2 = tempfile.NamedTemporaryFile(dir=initial_temp_directory, suffix=".PNG", delete=False)
 
     # All tests should run exactly as before, those two files above should be ignored.
     run()

@@ -46,7 +46,8 @@ def test_simple_multi_threading_example():
     for t in tmpfiles:
         t.close()
 
-    shutil.rmtree(tmpdir)
+    # Removing because it causes errors on Windows
+    # shutil.rmtree(tmpdir)
 
 
 def test_all_operations_multi_thread():
@@ -79,7 +80,8 @@ def test_all_operations_multi_thread():
     for t in tmpfiles:
         t.close()
 
-    shutil.rmtree(tmpdir)
+    # Removing because it causes errors on Windows
+    # shutil.rmtree(tmpdir)
 
 def test_multi_threading_override():
 
@@ -111,4 +113,5 @@ def test_multi_threading_override():
     for t in tmpfiles:
         t.close()
 
-    shutil.rmtree(tmpdir)
+    # Removing because it causes errors on Windows
+    # shutil.rmtree(tmpdir)
