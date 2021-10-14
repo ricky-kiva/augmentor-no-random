@@ -27,4 +27,4 @@ jobs:
         pip install Augmentor
     - name: Run built in tests on installed version of Augmentor
       run: |
-        py.test -v
+        pytest -v
