@@ -286,7 +286,7 @@ def test_class_image_scan():
     os.mkdir(os.path.join(initial_temp_directory, sub_dirs[r1], output_directory))
     os.mkdir(os.path.join(initial_temp_directory, sub_dirs[r2], "ignore_me"))
     temp_to_ignore = tempfile.NamedTemporaryFile(dir=os.path.join(initial_temp_directory,
-                     sub_dirs[r1], output_directory), suffix=".JPEG")
+                     sub_dirs[r1], output_directory), suffix=".JPEG", delete=False)
     im = Image.fromarray(np.uint8(np.random.rand(80, 80, 3) * 255))
     im.save(temp_to_ignore.name, "JPEG")
     run()
