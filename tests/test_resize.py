@@ -68,4 +68,5 @@ def test_resize_save_to_disk():
     for t in tmpfiles:
         t.close()
 
-    shutil.rmtree(tmpdir)
+    # Removing because of errors caused in Windows
+    # shutil.rmtree(tmpdir)
