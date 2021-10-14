@@ -182,7 +182,7 @@ def test_generator():
     height = 800
 
     for i in range(num_of_images):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False)
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
