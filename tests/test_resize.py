@@ -20,7 +20,7 @@ smaller_dimensions = (400, 400)
 def test_resize_in_memory():
 
     tmpdir = tempfile.mkdtemp()
-    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG')
+    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False)
     im = Image.new('RGB', original_dimensions)
     im.save(tmp.name, 'JPEG')
 
@@ -45,7 +45,7 @@ def test_resize_save_to_disk():
     n = 10
     tmpfiles = []
     for i in range(n):
-        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
         im = Image.new('RGB', original_dimensions)
         im.save(tmpfiles[i].name, 'JPEG')
 

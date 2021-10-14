@@ -10,7 +10,7 @@ from PIL import Image
 
 def create_colour_temp_image(size, file_format):
     tmpdir = tempfile.mkdtemp()
-    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG')
+    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False)
 
     im = Image.fromarray(np.uint8(np.random.rand(800, 800, 3) * 255))
     im.save(tmp.name, file_format)
@@ -20,7 +20,7 @@ def create_colour_temp_image(size, file_format):
 
 def create_greyscale_temp_image(size, file_format):
     tmpdir = tempfile.mkdtemp()
-    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG')
+    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False)
 
     im = Image.fromarray(np.uint8(np.random.rand(800, 800) * 255))
     im.save(tmp.name, file_format)
@@ -39,7 +39,7 @@ def create_sub_folders(number_of_sub_folders, number_of_images):
         sub_temp_directory = tempfile.mkdtemp(dir=parent_temp_directory)
         temp_directories.append(sub_temp_directory)
         for y in range(number_of_images):
-            temp_file = tempfile.NamedTemporaryFile(dir=sub_temp_directory, suffix='.JPEG')
+            temp_file = tempfile.NamedTemporaryFile(dir=sub_temp_directory, suffix='.JPEG', delete=False)
             im_array = Image.fromarray(np.uint8(np.random.rand(800, 800) * 255))
             im_array.save(temp_file.name, 'JPEG')
             temp_files.append(temp_file)

@@ -40,7 +40,7 @@ def test_rotate_images_custom_temp_files():
     original_dimensions = (800, 800)
 
     tmpdir = tempfile.mkdtemp()
-    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG')
+    tmp = tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False)
     im = Image.new('RGB', original_dimensions)
     im.save(tmp.name, 'JPEG')
 
