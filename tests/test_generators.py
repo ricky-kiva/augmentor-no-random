@@ -57,7 +57,8 @@ def test_image_generator_function():
 
     # Finally remove the directory (and everything in it) as mkdtemp does
     # not delete itself after closing automatically
-    shutil.rmtree(tmpdir)
+    # Removing because this causes errors in Windows tests
+    # shutil.rmtree(tmpdir)
 
 
 def test_keras_generator_from_disk():
