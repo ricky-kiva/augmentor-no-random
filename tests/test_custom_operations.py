@@ -39,7 +39,7 @@ def test_adding_custom_function():
     tmps = []
 
     for i in range(10):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
