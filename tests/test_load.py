@@ -60,7 +60,7 @@ def test_initialise_with_subfolders():
 
     # Add some images in the root directory, and some folders in the sub directories,
     # they should not be found when doing the scan
-    tmp_not_to_be_found = tempfile.NamedTemporaryFile(dir=parent_temp_directory, suffix='.JPEG')
+    tmp_not_to_be_found = tempfile.NamedTemporaryFile(dir=parent_temp_directory, suffix='.JPEG', delete=False)
     im_not_to_be_found = Image.fromarray(np.uint8(np.random.rand(800, 800) * 255))
     im_not_to_be_found.save(tmp_not_to_be_found.name, "JPEG")
 
@@ -109,7 +109,7 @@ def test_initialise_with_ten_images():
     tmps = []
 
     for i in range(10):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
@@ -156,7 +156,7 @@ def test_dataframe_initialise_with_ten_images():
     tmps = []
 
     for i in range(10):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 

@@ -28,7 +28,7 @@ def test_image_generator_function():
     tmps = []
 
     for i in range(10):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
@@ -70,7 +70,7 @@ def test_keras_generator_from_disk():
     tmps = []
 
     for i in range(10):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
@@ -267,7 +267,7 @@ def test_generator_image_scan():
     for sub_dir in sub_dirs:
         for iterator in range(num_of_im_files):
             suffix_filetype = random.choice(suffix_filetypes)
-            tmp_files.append(tempfile.NamedTemporaryFile(dir=os.path.abspath(sub_dir), suffix=suffix_filetype[0]))
+            tmp_files.append(tempfile.NamedTemporaryFile(dir=os.path.abspath(sub_dir), suffix=suffix_filetype[0], delete=False))
             im = Image.fromarray(np.uint8(np.random.rand(80, 80, 3) * 255))
             im.save(tmp_files[image_counter].name, suffix_filetype[1])
             image_counter += 1

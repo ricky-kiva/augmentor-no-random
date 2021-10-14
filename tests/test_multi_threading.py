@@ -23,7 +23,7 @@ def test_simple_multi_threading_example():
     n = 100
     tmpfiles = []
     for i in range(n):
-        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
         im = Image.new('RGB', original_dimensions)
         im.save(tmpfiles[i].name, 'JPEG')
 
@@ -55,7 +55,7 @@ def test_all_operations_multi_thread():
     n = 100
     tmpfiles = []
     for i in range(n):
-        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
         im = Image.new('RGB', (480, 800))
         im.save(tmpfiles[i].name, 'JPEG')
 
@@ -88,7 +88,7 @@ def test_multi_threading_override():
     n = 100
     tmpfiles = []
     for i in range(n):
-        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmpfiles.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
         im = Image.new('RGB', original_dimensions)
         im.save(tmpfiles[i].name, 'JPEG')
 

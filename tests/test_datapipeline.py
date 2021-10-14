@@ -40,7 +40,7 @@ def test_sample_with_no_masks():
     num_of_images = 10
 
     for i in range(num_of_images):
-        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG'))
+        tmps.append(tempfile.NamedTemporaryFile(dir=tmpdir, suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
@@ -101,7 +101,7 @@ def test_sample_with_masks():
     mask_tmps = []
 
     for i in range(num_of_images):
-        mask_tmps.append(tempfile.NamedTemporaryFile(dir=mask_tmpdir, prefix=str(i), suffix='.JPEG'))
+        mask_tmps.append(tempfile.NamedTemporaryFile(dir=mask_tmpdir, prefix=str(i), suffix='.JPEG', delete=False))
 
         bytestream = io.BytesIO()
 
