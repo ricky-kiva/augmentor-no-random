@@ -831,11 +831,12 @@ class Pipeline(object):
         """
         Set the seed of Python's internal random number generator.
 
-        :param seed: The seed to use. Strings or other objects will be hashed.
+        :param seed: The seed to use.
         :type seed: Integer
         :return: None
         """
         random.seed(seed)
+        np.random.seed(seed)
 
     # TODO: Implement
     # def subtract_mean(self, probability=1):
