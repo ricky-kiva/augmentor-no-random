@@ -34,8 +34,8 @@ setup(
         'Pillow>=5.2.0',
         'tqdm>=4.9.0',
         'future>=0.16.0',
-        'numpy>=1.11.0',
-        'futures>=3.2.0; python_version == "2.7"'
+        'numpy>=1.11.0'
+        #'futures>=3.2.0; python_version == "2.7"'
     ]
     # zip_safe=False # Check this later.
 )
