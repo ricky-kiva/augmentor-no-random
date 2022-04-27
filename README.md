@@ -2,7 +2,7 @@
 
 Augmentor is an image augmentation library in Python for machine learning. It aims to be a standalone library that is platform and framework independent, which is more convenient, allows for finer grained control over augmentation, and implements the most real-world relevant augmentation techniques. It employs a stochastic approach using building blocks that allow for operations to be pieced together in a pipeline.
 
-[![PyPI](https://img.shields.io/badge/Augmentor-v0.2.9-blue.svg?maxAge=2592000)](https://pypi.python.org/pypi/Augmentor)
+[![PyPI](https://img.shields.io/badge/Augmentor-v0.2.10-blue.svg?maxAge=2592000)](https://pypi.python.org/pypi/Augmentor)
 [![Supported Python Versions](https://img.shields.io/badge/python-2.7%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue.svg)](https://pypi.python.org/pypi/Augmentor)
 [![PyPI Install](https://github.com/mdbloice/Augmentor/actions/workflows/PyPI.yml/badge.svg)](https://github.com/mdbloice/Augmentor/actions/workflows/PyPI.yml)
 [![Pytest](https://github.com/mdbloice/Augmentor/actions/workflows/package-tests.yml/badge.svg)](https://github.com/mdbloice/Augmentor/actions/workflows/package-tests.yml)

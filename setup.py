@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='Augmentor',
     packages=['Augmentor'],
-    version='0.2.9',
+    version='0.2.10',
     description='Image augmentation library for Machine Learning',
     long_description='Image augmentation library for Machine Learning',
     license='MIT',
@@ -23,9 +23,11 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     install_requires=[

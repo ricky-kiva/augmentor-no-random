@@ -1659,13 +1659,13 @@ class Pipeline(object):
         :param probability: A value between 0 and 1 representing the
          probability that the operation should be performed.
         :param rectangle_area: The percentage area of the image to occlude
-         with the random rectangle, between 0.1 and 1.
+         with the random rectangle, between 0.01 and 1.
         :return: None
         """
         if not 0 < probability <= 1:
             raise ValueError(Pipeline._probability_error_text)
-        elif not 0.1 < rectangle_area <= 1:
-            raise ValueError("The rectangle_area must be between 0.1 and 1.")
+        elif not 0.01 <= rectangle_area <= 1:
+            raise ValueError("The rectangle_area must be between 0.01 and 1.")
         else:
             self.add_operation(RandomErasing(probability=probability, rectangle_area=rectangle_area))
 
