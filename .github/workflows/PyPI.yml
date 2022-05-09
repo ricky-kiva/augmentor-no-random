@@ -3,7 +3,8 @@
 name: PyPI Install
 
 on:
-  release
+  workflow_dispatch:
+  release:
 
 jobs:
   build:
