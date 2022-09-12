@@ -25,7 +25,7 @@ See the documentation for building from source. To upgrade from a previous versi
 
 ## Documentation
 
-Complete documentation can be found on Read the Docs: <http://augmentor.readthedocs.io/>
+Complete documentation can be found on Read the Docs: [https://augmentor.readthedocs.io](https://augmentor.readthedocs.io/en/stable/)
 
 ## Quick Start Guide and Usage
 The purpose of _Augmentor_ is to automate image augmentation (artificial data generation) in order to expand datasets as input for machine learning algorithms, especially neural networks and deep learning.
