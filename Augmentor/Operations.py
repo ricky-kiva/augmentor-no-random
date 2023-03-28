@@ -1893,26 +1893,26 @@ class RandomErasing(Operation):
          PIL.Image.
         """
 
+        w, h = images[0].size
+
+        w_occlusion_max = int(w * self.rectangle_area)
+        h_occlusion_max = int(h * self.rectangle_area)
+
+        w_occlusion_min = int(w * 0.1)
+        h_occlusion_min = int(h * 0.1)
+
+        w_occlusion = random.randint(w_occlusion_min, w_occlusion_max)
+        h_occlusion = random.randint(h_occlusion_min, h_occlusion_max)
+
+        random_position_x = random.randint(0, w - w_occlusion)
+        random_position_y = random.randint(0, h - h_occlusion)
+
         def do(image):
-
-            w, h = image.size
-
-            w_occlusion_max = int(w * self.rectangle_area)
-            h_occlusion_max = int(h * self.rectangle_area)
-
-            w_occlusion_min = int(w * 0.1)
-            h_occlusion_min = int(h * 0.1)
-
-            w_occlusion = random.randint(w_occlusion_min, w_occlusion_max)
-            h_occlusion = random.randint(h_occlusion_min, h_occlusion_max)
 
             if len(image.getbands()) == 1:
                 rectangle = Image.fromarray(np.uint8(np.random.rand(w_occlusion, h_occlusion) * 255))
             else:
                 rectangle = Image.fromarray(np.uint8(np.random.rand(w_occlusion, h_occlusion, len(image.getbands())) * 255))
-
-            random_position_x = random.randint(0, w - w_occlusion)
-            random_position_y = random.randint(0, h - h_occlusion)
 
             image.paste(rectangle, (random_position_x, random_position_y))
 
