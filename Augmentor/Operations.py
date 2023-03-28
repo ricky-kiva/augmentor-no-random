@@ -1893,6 +1893,7 @@ class RandomErasing(Operation):
          PIL.Image.
         """
 
+        # We are assuming here that all images are the same size.
         w, h = images[0].size
 
         w_occlusion_max = int(w * self.rectangle_area)
