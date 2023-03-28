@@ -25,7 +25,7 @@ See the documentation for building from source. To upgrade from a previous versi
 
 ## Documentation
 
-Complete documentation can be found on Read the Docs: <http://augmentor.readthedocs.io/>
+Complete documentation can be found on Read the Docs: [https://augmentor.readthedocs.io](https://augmentor.readthedocs.io/en/stable/)
 
 ## Quick Start Guide and Usage
 The purpose of _Augmentor_ is to automate image augmentation (artificial data generation) in order to expand datasets as input for machine learning algorithms, especially neural networks and deep learning.
@@ -227,7 +227,7 @@ Random Erasing is a technique used to make models robust to occlusion. This may 
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![Original](https://raw.githubusercontent.com/mdbloice/AugmentorFiles/master/UsageGuide/city-road-street-italy-scaled.jpg) | ![Original](https://raw.githubusercontent.com/mdbloice/AugmentorFiles/master/UsageGuide/city-road-street-italy-animation.gif) |
 
-See the [Pipeline.random_erasing()](http://augmentor.readthedocs.io/en/master/code.html#Augmentor.Pipeline.Pipeline.random_erasing) documentation for usage.
+See the [Pipeline.random_erasing()](https://augmentor.readthedocs.io/en/stable/code.html#Augmentor.Pipeline.Pipeline.random_erasing) documentation for usage.
 
 ### Chaining Operations in a Pipeline
 
@@ -330,11 +330,6 @@ $ py.test -v
 ```
 
 from the command line. To view the CI tests that are run after each commit, see <https://travis-ci.org/mdbloice/Augmentor>.
-
-## Citing Augmentor
-If you find this package useful and wish to cite it, you can use
-
-Marcus D Bloice, Peter M Roth, Andreas Holzinger, Biomedical image augmentation using Augmentor, *Bioinformatics*, <https://doi.org/10.1093/bioinformatics/btz259>
 
 ## Asciicast
 
