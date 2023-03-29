@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='Augmentor',
     packages=['Augmentor'],
-    version='0.2.11',
+    version='0.2.12',
     description='Image augmentation library for Machine Learning',
     long_description='Image augmentation library for Machine Learning',
     license='MIT',
