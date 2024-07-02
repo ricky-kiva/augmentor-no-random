@@ -503,7 +503,7 @@ class Skew(Operation):
 
         max_skew_amount = max(w, h)
         max_skew_amount = int(ceil(max_skew_amount * self.magnitude))
-        skew_amount = random.randint(1, max_skew_amount)
+        skew_amount = max_skew_amount
 
         # Old implementation, remove.
         # if not self.magnitude:
@@ -795,8 +795,8 @@ class RotateRange(Operation):
         """
 
         # TODO: Small rotations of 1 or 2 degrees can create black pixels
-        random_left = random.randint(self.max_left_rotation, 0)
-        random_right = random.randint(0, self.max_right_rotation)
+        random_left = self.max_left_rotation
+        random_right = self.max_right_rotation
 
         left_or_right = random.randint(0, 1)
 
@@ -1207,7 +1207,7 @@ class Shear(Operation):
         # max_shear_left = 20
         # max_shear_right = 20
 
-        angle_to_shear = int(random.uniform((abs(self.max_shear_left)*-1) - 1, self.max_shear_right + 1))
+        angle_to_shear = self.max_shear_left
         if angle_to_shear != -1: angle_to_shear += 1
 
         # Alternative method
@@ -1453,8 +1453,8 @@ class Distort(Operation):
                 polygon_indices.append([i, i + 1, i + horizontal_tiles, i + 1 + horizontal_tiles])
 
         for a, b, c, d in polygon_indices:
-            dx = random.randint(-self.magnitude, self.magnitude)
-            dy = random.randint(-self.magnitude, self.magnitude)
+            dx = self.magnitude
+            dy = self.magnitude
 
             x1, y1, x2, y2, x3, y3, x4, y4 = polygons[a]
             polygons[a] = [x1, y1,
