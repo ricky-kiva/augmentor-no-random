@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='Augmentor',
+    name='augmentor_no_random',
     packages=['Augmentor'],
     version='0.2.12',
     description='Image augmentation library for Machine Learning',
